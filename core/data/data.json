@@ -7,12 +7,21 @@
     "data":{
         "user_name":"Asja Maric",
         "username_page": "Instagram Accounts",
-        "error_message": "Hashtag cannot be empty"
+        "error_message": "Hashtag cannot be empty",
+        "title": "Problem with Hashtag Page - demo",
+        "description": "Hashtag page does not load."
+        
     },
 
     "credentials": {
         "login_email" : "asja.maric@gmail.com",
-        "login_password" : "AsjaMaric3008"
+        "login_password" : "AsjaMaric3008",
+        "instagram_email": "fake_profile123",
+        "instagram_password": "fakepassword123",
+        "instagram_recipient": "asyya.m",
+        "message": "Sun, beach, wind",
+        "new_password": "AsjaMaric3008",
+        "repeat_password": "AsjaMaric3008"
         
     },
 

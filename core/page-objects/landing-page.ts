@@ -18,6 +18,13 @@ export class LandingPage extends BasePage {
     //U.T.: Test 3
     private hashtag_menu_option = By.xpath("/html/body/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div/nav/ul/li[3]/a/span[2]");
 
+    //Integration Tests
+    //I.T.: Test 1
+    private dm_menu_option = By.xpath("/html/body/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div/nav/ul/li[4]/a");
+
+    //I.T.:Test 2
+    private help_desk_menu_option = By.xpath("/html/body/div[1]/div[1]/div/div/div[1]/div[2]/div/div/div/div/nav/ul/li[6]/a/span[2]");
+
     constructor(driver: WebDriver) {
         super(driver);
     }
@@ -35,6 +42,17 @@ export class LandingPage extends BasePage {
     //U.T.:Test 3
     async hashtagMenuOption(){
         await this.waitAndClick(this.hashtag_menu_option, 1000);
+    }
+
+    //Integration Tests
+    //I.T.: Test 1
+    async dmMenuOption(){
+        await this.waitAndClick(this.dm_menu_option, 1000);
+    }
+
+    //I.T.:Test 2
+    async HelpDeskMenuOption(){
+        await this.waitAndClick(this.help_desk_menu_option, 1000);
     }
 
 
