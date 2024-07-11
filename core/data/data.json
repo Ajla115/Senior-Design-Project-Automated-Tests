@@ -1,26 +1,19 @@
 
 {
     "url": {
-        "home_page": "http://localhost:3000/auth/login
-        "
+        "home_page": "http://localhost:3000/auth/login"
     },
 
     "data":{
-        "login_email" : "regularuser@gmail.com",
-        "name":"John Doe",
-        "subject":"Demo",
-        "email":"ajla.korman@stu.ibu.edu.ba",
-        "message": "Have a nice day!",
-        "register_page": "Create Your Account",
-        "register_email": "johndoe@gmail.com"
-       
+        "user_name":"Asja Maric",
+        "username_page": "Instagram Accounts",
+        "error_message": "Hashtag cannot be empty"
     },
 
     "credentials": {
-        "login_password" : "regular123",
-        "register_password":"JohnDoe5",
-        "new_password" : "JohnDoe55"
-
+        "login_email" : "asja.maric@gmail.com",
+        "login_password" : "AsjaMaric3008"
+        
     },
 
     "verification_message": {

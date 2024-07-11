@@ -8,50 +8,27 @@ const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
 export class LoginPage extends BasePage {
 
-    private input_email_field = By.xpath("/html/body/section/div/div/div/div/div/div/form/div[1]/input");
-    private input_password_field = By.xpath("/html/body/section/div/div/div/div/div/div/form/div[2]/input");
-    private login_button = By.xpath("/html/body/section/div/div/div/div/div/div/form/button");
 
-    private change_password_button = By.xpath("/html/body/section/div/div/div/div/div/div/p[1]/a");
+
+    //Unit Tests
+    private email_field = By.xpath("/html/body/div[1]/main/div/div[1]/div/div/div/form/div/div[1]/div/input");
+    private password_field = By.xpath("/html/body/div[1]/main/div/div[1]/div/div/div/form/div/div[2]/div/input");
+    private login_button = By.xpath("/html/body/div[1]/main/div/div[1]/div/div/div/form/button");
 
 
     constructor(driver: WebDriver) {
         super(driver);
     }
 
-    //Test 1
+    //U.T: Test 1
 
     async inputEmail(){
-        await this.fillInputField(this.input_email_field, testData.data.login_email);
+        await this.fillInputField(this.email_field, testData.credentials.login_email);
     }
 
     async inputPassword(){
-        await this.fillInputField(this.input_password_field, testData.credentials.login_password);
+        await this.fillInputField(this.password_field, testData.credentials.login_password);
     }
-
-    
-    //Test 2
-
-    async inputEmail2(){
-        await this.waitForElement(this.input_email_field, 10000);
-        await this.fillInputField(this.input_email_field, testData.data.register_email);
-    }
-
-    async inputPassword2(){
-        await this.fillInputField(this.input_password_field, testData.credentials.register_password);
-    }
-
-    //Test 3
-
-
-    async changePasswordButton(){
-        await this.findElementAndClick(this.change_password_button);
-    }
-
-
-
-    
-
 
     async loginButton(){
         await this.findElementAndClick(this.login_button);

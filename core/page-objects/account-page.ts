@@ -1,3 +1,4 @@
+
 import { By, WebDriver, until } from "selenium-webdriver";
 import BasePage from "./base-page";
 import { readFileSync } from "fs";
@@ -6,31 +7,20 @@ import * as path from "path";
 const dataFilePath = path.resolve(__dirname, "../data/data.json");
 const testData = JSON.parse(readFileSync(dataFilePath, "utf8"));
 
-export class UserPage extends BasePage {
+export class AccountPage extends BasePage {
 
-  
-
-    //Test 2
-
-    private logout_button = By.xpath("/html/body/main/section[5]/section/div/div[2]/div/button[1]");
-
+    //Unit Tests
+    private name_prompt = By.xpath("/html/body/div[1]/div[2]/div/main/div/div/div[2]/div[1]/h4");
+    
     constructor(driver: WebDriver) {
         super(driver);
     }
 
-    //Test 2
+    //U.T: Test 1
 
-    async logoutButton(){
-        await this.findElementAndClick(this.logout_button);
+    async verifyUserName(){
+        await this.checkMatchingElements(this.name_prompt, testData.data.user_name);
     }
-
-
-
-
-
-
-    
-
 
 
  
